@@ -23,7 +23,7 @@ function switchProduct(containerId) {
 function updateMainImage(src) {
   mainImage.style.opacity = '0';
   setTimeout(() => {
-    mainImage.src = src.replace('100x100', '400x400');
+    mainImage.src = src.replace('80x80', '400x400');
     mainImage.style.opacity = '1';
   }, 300);
 }
@@ -117,7 +117,7 @@ function preloadImages() {
   const images = document.querySelectorAll('.carousel-item');
   images.forEach(img => {
     const fullSizeImg = new Image();
-    fullSizeImg.src = img.src.replace('100x100', '500x500');
+    fullSizeImg.src = img.src.replace('80x80', '400x400');
   });
 }
 
