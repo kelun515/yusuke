@@ -446,7 +446,7 @@ header {
   }
 
   nav {
-      padding: 1px;
+      padding: 0px;
       margin-bottom: -20px;
   }
   .product-container{
@@ -457,8 +457,8 @@ header {
 
   .product-info{
     
-    width: 120%;
-    height: 40%;
+    max-width: 120%;
+    max-height: 50%;
     font-size: 12px;
   }
 
