@@ -448,6 +448,7 @@ header {
   nav {
       padding: 0px;
       margin-bottom: -20px;
+      font-size:12px;
   }
   .product-container{
   
@@ -458,7 +459,7 @@ header {
   .product-info{
     
     max-width: 120%;
-    max-height: 50%;
+    max-height: 55%;
     font-size: 12px;
   }
 
@@ -484,10 +485,10 @@ header {
   .Portfolio{
     width: 80%;
   }
-  
-
-  
-
+  .triangles{
+    width:80%;
+   height:80%;
+  }
 }
 
 @keyframes square-animation {
