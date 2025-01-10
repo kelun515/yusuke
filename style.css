@@ -472,11 +472,11 @@ header {
     bottom:0%;
   }
     .rating{
-    transform: translateX(25px);
+    transform: translateX(20px);
 
   }
   .rating2{
-    transform: translateX(25px);
+    transform: translateX(250px);
   }
   .loader{
     transform: translateY(-20px);
