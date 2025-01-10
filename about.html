@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YUSUKE - fashion store</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" type="image/png" href="./static/logo1round2.png">
+</head>
+
+<body>
+   
+  
+    
+    <nav>
+      <a href="index.html" class="logo">
+        <img src="./static/logo1round2.png" alt="YUSUKE Logo"></a>
+      
+
+      <header>
+        <a href="index.html" class="logo2">
+          <img src="./static/wordlogo.png" alt="YUSUKE Logo"></a>
+  
+        <div class="nav-links">
+            <a href="index.html">Hoodie</a>
+            <a href="pants.html">Pants</a>
+            <a href="shoes.html">Shoes</a>
+            <a href="about.html">About</a>
+        </div>
+      </header>
+
+    </nav>
+    <div class="loader">
+        <p>You can find here</p>
+        <div class="words">
+            <span class="word">Hoodies</span>
+            <span class="word">Hoodies</span>
+            <span class="word">Pants</span>
+            <span class="word">Shoes</span>
+            <span class="word">Clothes</span>
+        </div>
+      </div>
+
+      <div class="cubic">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      
+    <div class="triangles">
+        <div class="tri invert"></div>
+        <div class="tri invert"></div>
+        <div class="tri"></div>
+        <div class="tri invert"></div>
+        <div class="tri invert"></div>
+        <div class="tri"></div>
+        <div class="tri invert"></div>
+        <div class="tri"></div>
+        <div class="tri invert"></div>
+      </div>
+    <style>
+
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Euclid Circular A", "Poppins";
+  position: relative;/* Required for pseudo-element positioning */
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./static/background.png?height=1080&width=1920') center/cover;
+  opacity: 0.5; /* Set the opacity for the background */
+  z-index: -1; /* Place it behind the content */
+}
+
+
+.accordion {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 350px;
+  gap: 16px;
+  transition: 0.3s;
+}
+
+.accordion:hover {
+  gap: 0;
+}
+
+.accordion li {
+  position: relative;
+  overflow: hidden;
+  flex: 0 0 80px;
+  border-radius: 50px;
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+.accordion li img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(0.5);
+}
+
+.accordion li,
+.accordion li img,
+.accordion li .content,
+.accordion li .content span {
+  transition: 0.3s;
+}
+
+.accordion h2 {
+  font-weight: 350;
+  font-size: 24px;
+  line-height: 40px;
+  border-bottom: 2px solid #fff;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.accordion li .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  color: #fff;
+  padding: 15px;
+  background: #02022e;
+  background: linear-gradient(
+    0deg,
+    rgb(0 0 0 / 70%) 10%,
+    rgb(255 255 255 / 0%) 100%
+  );
+  opacity: 0;
+  visibility: hidden;
+}
+
+.accordion li .content span {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  bottom: 50px;
+  translate: -50%;
+  scale: 0.85;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.accordion li:hover {
+  flex: 0 1 260px;
+  scale: 1.1;
+  z-index: 10;
+  opacity: 1;
+}
+
+.accordion li:hover .content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.accordion li:hover span {
+  scale: 1;
+  opacity: 1;
+  visibility: visible;
+}
+
+.Portfolio p {
+    font-size: 15px; 
+    text-align: center;
+    max-width: 55em;
+}
+   
+
+h1 {
+    margin-bottom: 10px;
+    margin-top: 20px; /* Adjust the value as needed */
+    text-align: center; 
+    font-size: 15px;/* Center-align the text */
+}
+
+/* Ensure headings are aligned in one column and centered */
+.Portfolio ul.about-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align the headings */
+    padding-left: 0; /* Remove padding to ensure proper centering */
+    list-style: none; /* Remove bullet points from the list */
+}
+
+@media (max-width: 768px) {
+  .accordion {
+    height: 250px; /* Reduce the height of the accordion */
+    gap: 8px; /* Reduce the gap between accordion items */
+  }
+
+  .accordion li {
+    flex: 0 20 60px; /* Reduce the width of each accordion item */
+  }
+
+  .accordion li:hover {
+    flex: 0 20 200px; /* Reduce the width of the hovered accordion item */
+  }
+
+  .accordion h2 {
+    font-size: 18px; /* Reduce the font size of the accordion title */
+    line-height: 30px; /* Reduce the line height of the accordion title */
+  }
+
+  .accordion li .content {
+    padding: 10px; /* Reduce the padding of the accordion content */
+  }
+
+  .accordion li .content span {
+    bottom: 30px; /* Adjust the position of the accordion content span */
+  }
+}
+    </style>
+
+    <div class="Portfolio">
+        <h1 class="about-title" style="font-family: 'fonts';">Yesun-Erdene Sedbazar</h1>
+        <ul class="about-details">
+            <ul class="accordion">
+                <li>
+                    <img src="./static/taekw (1).PNG">
+                    <div class="content">
+                        <span>
+                            <h2>Taekwondo</h2>
+                            <p>Martial art</p>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <img src="./static/taek.JPG">
+                    <div class="content">
+                        <span>
+                            <h2>Taekwondo</h2>
+                            <p>Champion ship</p>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <img src="./static/voll.JPG">
+                    <div class="content">
+                        <span>
+                            <h2>Volleyball</h2>
+                            <p>Sport</p>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <img src="./static/gitar (1).PNG">
+                    <div class="content">
+                        <span>
+                            <h2>MANAN</h2>
+                            <p>Music band</p>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <img src="./static/dance.PNG">
+                    <div class="content">
+                        <span>
+                            <h2>Dancing</h2>
+                            <p>Art</p>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <img src="./static/ski (1).PNG">
+                    <div class="content">
+                        <span>
+                            <h2>Ski</h2>
+                            <p>Winter sport</p>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+            <h1>Introduction</h1>
+            <p> My name is Yesun-Erdene, and I am an 18-year-old university student majoring in Computer Science. As I embark on this exciting journey of higher education, I find that my diverse interests and experiences shape not only who 
+            I am but also how I approach my studies and life in general. From martial arts to music, sports to academics, I strive to maintain a balance that fosters personal growth and fulfillment.</p>
+            <h1>Martial art: Taekwondo</h1>
+            <p>In addition to my academic pursuits, I am an avid practitioner of Taekwondo, a martial art that has taught me discipline, focus, and resilience.
+             Recently, I had the honor of participating in the Korea Open 2023 as a black belt competitor. This experience not only challenged me physically but also mentally, as I had to strategize and perform under pressure. Taekwondo has instilled in me a sense of confidence and determination that transcends the dojo and influences my daily life.</p>
+             <h1>Musical Endeavors</h1>
+             <p>Music is another significant aspect of my life. I am a member of a rock band, where I play the role of the solo guitarist. This creative outlet allows me to express myself and connect with others who share my passion for music. 
+             I enjoy composing and experimenting with different sounds, and I often find inspiration in my surroundings. Music serves as a therapeutic escape for me, and I believe it enhances my overall well-being.</p>
+             <h1>Sports and Hobbies</h1>
+             <p>In addition to Taekwondo and music, I have a strong affinity for sports. Volleyball is a hobby that I enjoy, as it promotes teamwork and physical fitness. I also love swimming, which provides a refreshing way to stay active and unwind. When it comes to winter sports, skiing and snowboarding are my favorites. I often hit the slopes during the winter months, relishing the thrill of gliding down the mountains and embracing the beauty of nature.</p>
+          </ul>
+
+          <div class="social-menu">
+            <ul>
+              <li><a href="https://www.instagram.com/esun_erdn/" class="instagram"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="https://www.facebook.com/profile.php?id=100013410426271" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="https://mail.google.com/mail/u/0/#search/esun_thunder06" class="gmail"><i class="fa fa-envelope"></i></a></li>
+              <li><a href="https://www.youtube.com/@_kelun_" class="youtube"><i class="fab fa-youtube"></i></a></li>
+              <li><a href="https://t.me/yusuke0515" class="telegram"><i class="fab fa-telegram"></i></a></li>
+            </ul>
+          </div>
+      </div>
+
+
+</body>
+</html>      
+
