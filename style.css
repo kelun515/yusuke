@@ -469,7 +469,7 @@ header {
 
   .product-info {
     width: 100%;
-    max-width: 300px;
+    max-width: 500px;
     padding: 20px;
   }
   /* Adjusting the product title */
@@ -523,10 +523,10 @@ header {
 
   /* Adjusting the loader */
   .loader {
-    font-size: 16px;
-    padding: 5px;
+    font-size: 15px;
+    padding: 10px;
     left: 50%;
-  transform: translateX(-50%);
+    transform: translateX(-50%);
     
     top: 52px;
   }
