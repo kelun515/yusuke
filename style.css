@@ -434,64 +434,129 @@ header {
 }
 
 @media (max-width: 768px) {
+   /* Adjusting the main layout */
+   .main-content {
+    padding: 20px;
+  }
+
+  /* Adjusting the product container */
   .product-container {
-      flex-direction: column;
-      text-align: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .product-image {
-      width: 100%;
-      height: auto;
-      margin-bottom: -20px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 20px;
   }
 
-  nav {
-      padding: 0px;
-      margin-bottom: -20px;
-      font-size:12px;
-  }
-  .product-container{
-  
-    width: 80%;
-    height: 60%;
+  .carousel {
+    padding: 0;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin-bottom: 20px;
   }
 
-  .product-info{
-    
-    max-width: 120%;
-    max-height: 55%;
-    font-size: 12px;
+  .carousel-item {
+    width: 60px;
+    height: 60px;
+    transform: translateY(0);
   }
 
-  .product-title{
+  .product-info {
+    width: 100%;
+    max-width: 300px;
+    padding: 20px;
+  }
+  /* Adjusting the product title */
+  .product-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  /* Adjusting the product details */
+  .product-details li {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  /* Adjusting the price */
+  .product-info h3 {
     font-size: 20px;
+    margin-top: 10px;
   }
-  .carousel{
-    width: 70%;
-    height: 16%;
-    bottom:0%;
-  }
-    .rating{
-    transform: translateX(13px);
 
+  /* Adjusting the rating */
+  .rating {
+    transform: translateX(0);
+    justify-content: center;
+    margin-top: 8px;
   }
-  .rating2{
-    transform: translateX(15px);
-  }
-  .loader{
-    transform: translateY(-20px);
-    right:0;
 
-    font-size: 15px;
+  /* Adjusting the carousel */
+  .carousel {
+    padding: 200px;
+    bottom: 10px;
+    
+  }
+
+  .carousel-item {
+    width: 60px;
+    height: 60px;
+    transform: translateY(1em);
+    
+  }
+
+  /* Adjusting the navigation */
+  nav {
+    padding: 10px;
+  }
+
+  .logo img {
+    height: 60px;
+  }
+
+  .logo2 img {
+    height: 40px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  /* Adjusting the loader */
+  .loader {
+    font-size: 16px;
+    padding: 5px;
+    right: 120px;
+    top: 52px;
   }
 
   .Portfolio{
     width: 80%;
   }
+  
   .triangles{
-    width:80%;
-   height:80%;
+    width: 80%;
+    height: 80%;
   }
+
+  .social-menu ul li a {
+    width: 40px !important;
+    height: 40px !important;
+    line-height: 40px !important;
+    font-size: 20px !important;
+  }
+
+
 }
 
 @keyframes square-animation {
