@@ -523,10 +523,10 @@ header {
 
   /* Adjusting the loader */
   .loader {
-    font-size: 15px;
+    font-size: 13px;
     padding: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 49%;
+    transform: translateX(-49%);
     
     top: 52px;
   }
